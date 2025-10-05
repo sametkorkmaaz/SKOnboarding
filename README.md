@@ -16,9 +16,9 @@
 
 ## 📸 Screenshot
 
-*(It's highly recommended to add a screenshot or GIF of your library in action here. You can add the image to your repository and link it.)*
-
-![SKOnboarding Demo](https://i.imgur.com/gK9Jg0h.jpg)
+<img width="1206" height="2622" alt="screen1" src="https://github.com/user-attachments/assets/e8ec43de-e7f2-41e4-b64d-6899e166895b" />
+<img width="1206" height="2622" alt="screen2" src="https://github.com/user-attachments/assets/0176f8fc-9dbf-4e6f-85f7-5caff2504115" />
+<img width="1206" height="2622" alt="screen3" src="https://github.com/user-attachments/assets/52bc29d5-d23d-4e52-a349-a6f738043a18" />
 
 ## ⚙️ Installation
 
@@ -27,7 +27,7 @@ You can easily add `SKOnboarding` to your project using **Swift Package Manager*
 1.  In your Xcode project, go to `File > Add Packages...`
 2.  In the search bar, paste the URL of this repository:
     ```
-    [https://github.com/your-username/SKOnboarding.git](https://github.com/your-username/SKOnboarding.git)
+    https://github.com/sametkorkmaaz/SKOnboarding.git
     ```
 3.  For the "Dependency Rule", select **"Up to Next Major Version"** and click **"Add Package"**.
 
