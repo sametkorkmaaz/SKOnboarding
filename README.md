@@ -16,11 +16,9 @@
 
 ## 📸 Screenshot
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e8ec43de-e7f2-41e4-b64d-6899e166895b" width="250" />
-  <img src="https://github.com/user-attachments/assets/0176f8fc-9dbf-4e6f-85f7-5caff2504115" width="250" />
-  <img src="https://github.com/user-attachments/assets/52bc29d5-d23d-4e52-a349-a6f738043a18" width="250" />
-</p>
+## 📸 Screenshot
+
+<img src="https://github.com/user-attachments/assets/e8ec43de-e7f2-41e4-b64d-6899e166895b" width="250" /> <img src="https://github.com/user-attachments/assets/0176f8fc-9dbf-4e6f-85f7-5caff2504115" width="250" /> <img src="https://github.com/user-attachments/assets/52bc29d5-d23d-4e52-a349-a6f738043a18" width="250" />
 
 ## ⚙️ Installation
 
