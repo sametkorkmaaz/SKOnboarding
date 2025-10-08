@@ -82,7 +82,6 @@ class SKOnboardingViewController: UIViewController {
 
     // MARK: - Setup
     private func setupViews() {
-        view.backgroundColor = .white
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.layer.addSublayer(headerShapeLayer)
         
@@ -160,7 +159,8 @@ class SKOnboardingViewController: UIViewController {
         currentPageIndex = index
         let currentPage = pages[index]
         let isLastPage = index == pages.count - 1
-        
+        view.backgroundColor = currentPage.bgColor
+
         headerShapeLayer.fillColor = currentPage.mainColor.cgColor
         nextButton.backgroundColor = currentPage.mainColor
         skipButton.setTitleColor(.white, for: .normal)

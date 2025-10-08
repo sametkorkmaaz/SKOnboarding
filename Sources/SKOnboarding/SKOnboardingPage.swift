@@ -12,13 +12,15 @@ public struct SKOnboardingPage {
     public var title: String
     public var description: String
     public var mainColor: UIColor = .systemBlue
+    public var bgColor: UIColor = .white
     public var textColor: UIColor = .label
     
-    public init(image: UIImage, title: String, description: String, mainColor: UIColor = .systemBlue, textColor: UIColor = .label) {
+    public init(image: UIImage, title: String, description: String, mainColor: UIColor = .systemBlue, bgColor: UIColor = .white, textColor: UIColor = .label) {
         self.image = image
         self.title = title
         self.description = description
         self.mainColor = mainColor
+        self.bgColor = bgColor
         self.textColor = textColor
     }
 }
