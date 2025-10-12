@@ -82,13 +82,14 @@ class SKOnboardingPageViewController: UIViewController {
             imageView.widthAnchor.constraint(equalTo: imageContainerView.widthAnchor),
             imageView.heightAnchor.constraint(equalTo: imageContainerView.heightAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: imageContainerView.bottomAnchor, constant: 50),
+            titleLabel.topAnchor.constraint(equalTo: imageContainerView.bottomAnchor, constant: 32),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+            descriptionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -4)
         ])
     }
 
