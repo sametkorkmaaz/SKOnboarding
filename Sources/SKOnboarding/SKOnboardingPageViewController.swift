@@ -88,8 +88,7 @@ class SKOnboardingPageViewController: UIViewController {
             
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            descriptionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -4)
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
 
