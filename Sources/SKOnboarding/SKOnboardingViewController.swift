@@ -101,13 +101,13 @@ class SKOnboardingViewController: UIViewController {
             skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
-            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -view.bounds.height * 0.03),
+            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -view.bounds.height * 0.02),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            nextButton.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.05)
+            nextButton.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.08)
         ])
     }
     
