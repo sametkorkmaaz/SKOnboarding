@@ -45,7 +45,7 @@ class SKOnboardingViewController: UIViewController {
     private lazy var skipButton: UIButton = {
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         return button
@@ -96,18 +96,18 @@ class SKOnboardingViewController: UIViewController {
             headerView.topAnchor.constraint(equalTo: view.topAnchor),
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35),
+            headerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
 
             skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
-            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -30),
+            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -view.bounds.height * 0.03),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            nextButton.heightAnchor.constraint(equalToConstant: 50)
+            nextButton.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.05)
         ])
     }
     
