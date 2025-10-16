@@ -30,7 +30,7 @@ class SKOnboardingPageViewController: UIViewController {
 
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -92,10 +92,7 @@ class SKOnboardingPageViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.size.height * 0.05),
             stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -view.frame.size.height * 0.06),
             
-            imageContainerView.heightAnchor.constraint(equalTo: imageContainerView.widthAnchor),
-            imageContainerView.widthAnchor.constraint(equalTo: imageContainerView.heightAnchor),
-            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: stackView.widthAnchor),
-            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.8),
+            imageContainerView.heightAnchor.constraint(equalTo: view.frame.size.height * 0.3),
 
             imageView.topAnchor.constraint(equalTo: imageContainerView.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: imageContainerView.bottomAnchor),
