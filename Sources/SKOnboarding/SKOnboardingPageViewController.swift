@@ -11,6 +11,16 @@ class SKOnboardingPageViewController: UIViewController {
 
     private let page: SKOnboardingPage
     
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
     private let imageContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
@@ -20,7 +30,7 @@ class SKOnboardingPageViewController: UIViewController {
 
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -28,7 +38,7 @@ class SKOnboardingPageViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = page.textColor
@@ -38,7 +48,7 @@ class SKOnboardingPageViewController: UIViewController {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .regular)
+        label.font = .systemFont(ofSize: 14, weight: .regular)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = page.textColor.withAlphaComponent(0.7)
@@ -64,32 +74,39 @@ class SKOnboardingPageViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .clear
         
-        view.addSubview(imageContainerView)
-        imageContainerView.addSubview(imageView)
-        view.addSubview(titleLabel)
-        view.addSubview(descriptionLabel)
+        view.addSubview(stackView)
         
-        let imageContainerSize: CGFloat = view.bounds.width * 0.8
+        stackView.addArrangedSubview(imageContainerView)
+        imageContainerView.addSubview(imageView)
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(descriptionLabel)
+        
+        stackView.setCustomSpacing(32, after: imageContainerView)
+        
+        titleLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        descriptionLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
         NSLayoutConstraint.activate([
-            imageContainerView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageContainerView.widthAnchor.constraint(equalToConstant: imageContainerSize),
-            imageContainerView.heightAnchor.constraint(equalToConstant: imageContainerSize),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            imageView.centerXAnchor.constraint(equalTo: imageContainerView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: imageContainerView.centerYAnchor),
-            imageView.widthAnchor.constraint(equalTo: imageContainerView.widthAnchor),
-            imageView.heightAnchor.constraint(equalTo: imageContainerView.heightAnchor),
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 10),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -10),
             
-            titleLabel.topAnchor.constraint(equalTo: imageContainerView.bottomAnchor, constant: 32),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
-            descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+            imageContainerView.widthAnchor.constraint(equalTo: imageContainerView.heightAnchor),
+            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: stackView.widthAnchor),
+            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.8),
+
+            imageView.topAnchor.constraint(equalTo: imageContainerView.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: imageContainerView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: imageContainerView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: imageContainerView.trailingAnchor),
         ])
+        
+        titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        descriptionLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        imageContainerView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
     }
 
     private func configure() {
