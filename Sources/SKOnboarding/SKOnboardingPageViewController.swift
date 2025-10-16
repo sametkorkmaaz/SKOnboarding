@@ -95,7 +95,7 @@ class SKOnboardingPageViewController: UIViewController {
             imageContainerView.heightAnchor.constraint(equalTo: imageContainerView.widthAnchor),
             imageContainerView.widthAnchor.constraint(equalTo: imageContainerView.heightAnchor),
             imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: stackView.widthAnchor),
-            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.6),
+            imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.8),
 
             imageView.topAnchor.constraint(equalTo: imageContainerView.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: imageContainerView.bottomAnchor),
