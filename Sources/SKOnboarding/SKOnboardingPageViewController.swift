@@ -48,7 +48,7 @@ class SKOnboardingPageViewController: UIViewController {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = page.textColor.withAlphaComponent(0.7)
@@ -81,7 +81,7 @@ class SKOnboardingPageViewController: UIViewController {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
         
-        stackView.setCustomSpacing(32, after: imageContainerView)
+        stackView.setCustomSpacing(16, after: imageContainerView)
         
         titleLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         descriptionLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
@@ -89,10 +89,8 @@ class SKOnboardingPageViewController: UIViewController {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            
-            stackView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 10),
-            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -10),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: -10),
             
             imageContainerView.widthAnchor.constraint(equalTo: imageContainerView.heightAnchor),
             imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: stackView.widthAnchor),
