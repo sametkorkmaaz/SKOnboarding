@@ -90,7 +90,7 @@ class SKOnboardingPageViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             stackView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 8),
-            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -8),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -32),
             
             imageContainerView.widthAnchor.constraint(equalTo: imageContainerView.heightAnchor),
             imageContainerView.widthAnchor.constraint(lessThanOrEqualTo: stackView.widthAnchor),

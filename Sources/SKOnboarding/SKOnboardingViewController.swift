@@ -107,7 +107,7 @@ class SKOnboardingViewController: UIViewController {
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            nextButton.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.08)
+            nextButton.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.07)
         ])
     }
     
