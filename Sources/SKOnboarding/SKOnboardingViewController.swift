@@ -169,6 +169,7 @@ class SKOnboardingViewController: UIViewController {
         pageControl.pageIndicatorTintColor = currentPage.mainColor.withAlphaComponent(0.3)
         
         let buttonTitle = isLastPage ? "DONE" : "NEXT"
+        skipButton.isHidden = isLastPage
         nextButton.setTitle(buttonTitle, for: .normal)
     }
 }
